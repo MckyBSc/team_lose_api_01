@@ -25,7 +25,6 @@
                     <input type="text" class="form-control" name="f_name" required />
                     <label class="form-label" for="form2Example11">First Name</label>
                   </div>
-
                   <div class="form-outline mb-4">
                     <input type="text" class="form-control" name="l_name" required />
                     <label class="form-label" for="form2Example22">Last Name</label>
@@ -40,8 +39,6 @@
                   </div>
                 </form>
               </div>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
             </div>
           </div>
         </div>
