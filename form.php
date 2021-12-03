@@ -19,7 +19,7 @@
                   <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.6435-9/105019232_3073399092735917_7720627430733562192_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeF5t-CXsGXcNvCzpVJYzQpnwg5iKf4CUrrCDmIp_gJSuvAF3w2ARpazl8ZB1g4YUqwZp9I2fXeyPnRLMmHgk0I5&_nc_ohc=2GZnnhE5nw4AX_bpTMY&_nc_ht=scontent.fceb2-1.fna&oh=be03038d6a7845776a5455d124b7747b&oe=61D043F7" style="width: 185px;" alt="logo">
                   <h4 class="mt-1 mb-5 pb-1">Team Lose</h4>
                 </div>
-                <form action="form.php" method="post">
+                <form action="form.php" method="get">
 
                   <div class="form-outline mb-4">
                     <input type="text" class="form-control" name="f_name" required />
