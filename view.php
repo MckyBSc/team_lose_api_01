@@ -21,5 +21,5 @@
     echo $result['id'] . "<br>" .
     $result['first_name']. "<br>" .
     $result['last_name']. "<br>" .
-    $result['last_name'];
+    $result['email'];
 ?>
