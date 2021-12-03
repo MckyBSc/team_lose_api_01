@@ -1,3 +1,4 @@
+<?php include 'view.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,12 +20,43 @@
                   <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.6435-9/105019232_3073399092735917_7720627430733562192_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeF5t-CXsGXcNvCzpVJYzQpnwg5iKf4CUrrCDmIp_gJSuvAF3w2ARpazl8ZB1g4YUqwZp9I2fXeyPnRLMmHgk0I5&_nc_ohc=2GZnnhE5nw4AX_bpTMY&_nc_ht=scontent.fceb2-1.fna&oh=be03038d6a7845776a5455d124b7747b&oe=61D043F7" style="width: 185px;" alt="logo">
                   <h4 class="mt-1 mb-5 pb-1">Team Lose</h4>
                 </div>
-                <form action="form.php" method="get">
+                <?php
+                if (isset($_POST['submit'])) {
+                	// Create a new cURL resource
+                	$url = 'http://lending-loan.com/trainee/create';
+ 
+					$curl = curl_init();
+
+                	$fname = $_POST['f_name'];
+                	$lname = $_POST['l_name'];
+                	$email = $_POST['email'];
+
+                	$data =array(
+					  'first_name' => $fname,
+					  'last_name' => $lname,
+					  'email' => $email
+					);
+					 
+					$fields_string = http_build_query($data);
+ 
+					curl_setopt($curl, CURLOPT_URL, $url);
+					curl_setopt($curl, CURLOPT_POSTFIELDS, $fields_string);
+					
+					
+					
+				}
+
+				
+					?>
+
+                <form action="form.php" method="POST">
 
                   <div class="form-outline mb-4">
                     <input type="text" class="form-control" name="f_name" required />
                     <label class="form-label" for="form2Example11">First Name</label>
+
                   </div>
+                  
                   <div class="form-outline mb-4">
                     <input type="text" class="form-control" name="l_name" required />
                     <label class="form-label" for="form2Example22">Last Name</label>
@@ -35,6 +67,7 @@
                   </div>
                   <div class="form-outline mb-4">
                     <input type="submit" class="btn btn-primary form-control" name="submit" />
+                    <a href="view.php?id=<?php $data = curl_exec($curl); ?>">View Your data</a>
                   </div>
                   </div>
                 </form>
