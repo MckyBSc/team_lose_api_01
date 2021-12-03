@@ -1,4 +1,4 @@
-<?php include 'view.php'; ?>
+
 <!DOCTYPE html>
 <html>
 <head>
